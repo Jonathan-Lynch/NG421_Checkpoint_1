@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ITodo } from '../interfaces/itodo';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -11,10 +11,19 @@ import { TodoService } from '../services/todo.service';
   styleUrls: ['./todo-table.component.css']
 })
 export class TodoTableComponent implements OnInit {
+  displayColumns: string[] = ['title', 'description', 'status', 'createdAt'];
+  dataSource: MatTableDataSource<ITodo>;
+  @ViewChild(MatSort, {static: true}) sort: MatSort;
 
-  constructor() { }
+  constructor(private todoService: TodoService) { }
 
   ngOnInit() {
+    this.dataSource = new MatTableDataSource(this.todoService.getTodos());
+    this.dataSource.sort = this.sort;
+  }
+
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
 }
