@@ -10,6 +10,12 @@ import { ConfirmationModalComponent } from './confirmation-modal/confirmation-mo
 import {RouterModule } from '@angular/router';
 import { BoardComponent } from './board/board.component';
 import { TodoEditComponent } from './todo-edit/todo-edit.component';
+import { TodoTableComponent } from './todo-table/todo-table.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 const routes = [];
 const appRoutes = RouterModule.forRoot(routes);
@@ -22,13 +28,19 @@ const appRoutes = RouterModule.forRoot(routes);
     CreateTodoComponent,
     ConfirmationModalComponent,
     BoardComponent,
-    TodoEditComponent
+    TodoEditComponent,
+    TodoTableComponent
   ],
   imports: [
     BrowserModule,
     appRoutes,
     FormsModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatSortModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent],
