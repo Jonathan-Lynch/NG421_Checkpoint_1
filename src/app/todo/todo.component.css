@@ -15,6 +15,7 @@ button {
     text-decoration: line-through;
 }
 
-.todoTitle {
-    font-weight: bold;
+#edit {
+    background-color: rgba(0, 60, 255, 0.7);
+    border: rgba(0, 60, 255, 0.7);
 }
