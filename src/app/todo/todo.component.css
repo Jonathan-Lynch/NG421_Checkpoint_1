@@ -1,0 +1,20 @@
+button {
+    margin-right: 2px;
+}
+
+.todo {
+    color: rgba(0, 60, 255, 0.7)
+}
+
+.doing {
+    color: rgb(0, 255, 0)
+}
+
+.done {
+    color: rgb(255, 0, 0);
+    text-decoration: line-through;
+}
+
+.todoTitle {
+    font-weight: bold;
+}
