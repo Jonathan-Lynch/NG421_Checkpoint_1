@@ -11,7 +11,7 @@ import { TodoService } from '../services/todo.service';
   styleUrls: ['./todo-table.component.css']
 })
 export class TodoTableComponent implements OnInit {
-  displayColumns: string[] = ['title', 'description', 'status', 'createdAt'];
+  displayedColumns: string[] = ['title', 'description', 'status', 'createdAt'];
   dataSource: MatTableDataSource<ITodo>;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
 

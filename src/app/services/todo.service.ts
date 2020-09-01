@@ -11,7 +11,7 @@ export class TodoService {
 
   ];
 
-  statuses: string[] = ['todo', 'Doing', 'Done'];
+  statuses: string[] = ['Todo', 'Doing', 'Done'];
   constructor() { }
   getTodos(status?: string): ITodo[] {
     if (!status) {
