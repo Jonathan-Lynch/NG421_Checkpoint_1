@@ -17,7 +17,11 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
-const routes = [];
+const routes = [
+  { path: "table", component: TodoTableComponent },
+  { path: "board", component: BoardComponent },
+  { path: "", redirectTo: "/board", pathMatch: "full" },
+];
 const appRoutes = RouterModule.forRoot(routes);
 
 @NgModule({
