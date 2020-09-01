@@ -3,11 +3,13 @@ button {
 }
 
 .todo {
-    color: rgba(0, 60, 255, 0.7)
+    color: rgba(0, 60, 255, 0.7);
+    font-family: Arial, Helvetica, sans-serif; 
 }
 
 .doing {
-    color: rgb(0, 255, 0)
+    color: rgb(255, 0, 200);
+    font-family: "Times New Roman", Times, serif;
 }
 
 .done {
